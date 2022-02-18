@@ -9,19 +9,19 @@ import java.util.List;
 public class zad1 {
     public static<T> void redukuj(LinkedList<T> linkedList, int n)
     {
-        int tmp = 0;
+        int i = 0;
         Iterator<T> iter = linkedList.iterator();
         while(iter.hasNext())
         {
-            if(tmp == n)
+            if(i == n)
             {
                 iter.remove();
-                tmp -= n;
+                i -= n;
             }
             else
             {
                 iter.next();
-                tmp++;
+                i++;
             }
         }
     }
